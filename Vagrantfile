@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = ENV.fetch("ROM_VAGRANT_BOX")
+  config.vm.box_url = "https://s3-us-west-2.amazonaws.com/squishy.vagrant-boxes/precise64_squishy_2013-02-09.box"
   config.vm.hostname = 'rom-rb'
   config.vbguest.auto_update = true
   config.ssh.forward_agent = true
